@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef SHELL_H
+#define SHELL_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -46,25 +46,25 @@ typedef struct liststr
 	struct liststr *next;
 } list_t;
 /**
- * struct_passinfo -
- * @argv:
- * @argc:
- * @arg:
- * @path:
- * @line_count:
- * @err_num:
- * @linecount_flag:
- * @fname:
- * @env:
- * @environ:
- * @history:
- * @alias:
- * @env_changed:
- * @status:
- * @cmd_buf:
- * @cmd_buf_type:
- * @readfd:
- * @histcount:
+ * struct_passinfo - contains arguments to pass
+ * @argv: argument variable
+ * @argc: argument count
+ * @arg: argument string
+ * @path: string path
+ * @line_count: error count
+ * @err_num: exit error code
+ * @linecount_flag: input liner counter
+ * @fname: filename
+ * @env: environ linked list
+ * @environ: environment variable
+ * @history: history node
+ * @alias: alias node
+ * @env_changed: changed environ
+ * @status: status return
+ * @cmd_buf: pointer address
+ * @cmd_buf_type: command types
+ * @readfd: file descriptor to read
+ * @histcount: number count of history line
  */
 typedef struct passinfo
 {
@@ -92,9 +92,9 @@ typedef struct passinfo
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
 	0, 0, 0}
 /**
- * struct builtin -
- * @type:
- * @func:
+ * struct builtin - builtin string
+ * @type: builtin command file
+ * @func: builtin command function
  */
 typedef struct builtin
 {
