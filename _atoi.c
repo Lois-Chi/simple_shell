@@ -35,7 +35,7 @@ int _isalpha(int c)
 		return (0);
 }
 /**
- * _atoi: converts strring to integer
+ * _atoi - converts strring to integer
  * @s: string pointer
  * Return: 0 or 1 based on a condition:
  */

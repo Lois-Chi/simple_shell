@@ -27,7 +27,6 @@ int _erratoi(char *s)
 	return (result);
 }
 /**
-
  * print_error - prints an error message
  * @info: info address
  * @estr: error string

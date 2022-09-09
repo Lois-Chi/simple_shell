@@ -29,7 +29,7 @@ void set_info(info_t *info, char **av)
 			info->argv[1] = NULL;
 		}
 		for (i = 0; info->argv && info->argv[i]; i++)
-					;
+			;
 		info->argc = i;
 		replace_alias(info);
 		replace_vars(info);
@@ -48,7 +48,7 @@ void free_info(info_t *info, int all)
 	if (all)
 	{
 		if (!info->cmd_buf)
-			free(info->arg);				
+			free(info->arg);
 		if (info->env)
 			free_list(&(info->env));
 		if (info->history)
